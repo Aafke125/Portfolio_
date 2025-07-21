@@ -1,0 +1,84 @@
+:root {
+  --side-offset: 10%; /* Controls horizontal alignment of logo + nav */
+}
+
+/* General Body Styling */
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/869/original/BG.png?1753017192");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  font-family: "Murecho", sans-serif;
+  font-weight: 250;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Logo Styling */
+.logo-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: var(--side-offset);
+}
+
+.logo-container a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo-img {
+  margin-top: 80px;
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+}
+
+/* Nav Styling */
+.navbar .container-fluid {
+  justify-content: flex-start;
+  gap: 30px;
+  padding-left: var(--side-offset);
+  padding-right: var(--side-offset);
+}
+
+.nav-link {
+  font-size: 18px;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  :root {
+    --side-offset: 5%;
+  }
+
+  .logo-img {
+    width: 90%;
+  }
+
+  .navbar .container-fluid {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo-container {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .navbar .container-fluid {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
