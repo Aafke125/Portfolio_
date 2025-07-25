@@ -17,6 +17,12 @@ body {
   position: relative;
 }
 
+h3 {
+  font-family: "Murecho", sans-serif;
+  font-weight: 400;
+  margin-top: 2cap;
+}
+
 .logo-container {
   margin-top: 30px;
   display: flex;
