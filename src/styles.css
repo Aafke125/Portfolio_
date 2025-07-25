@@ -1,8 +1,7 @@
 :root {
-  --side-offset: 10%; /* Controls horizontal alignment of logo + nav */
+  --side-offset: 10%;
 }
 
-/* ========== General Body Styling ========== */
 body {
   background-color: #f8f8f8;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/869/original/BG.png?1753017192");
@@ -18,7 +17,6 @@ body {
   position: relative;
 }
 
-/* ========== Logo Styling (Shared for All Pages) ========== */
 .logo-container {
   margin-top: 30px;
   display: flex;
@@ -33,12 +31,11 @@ body {
 
 .logo-img {
   margin-top: 80px;
-  max-width: 300px;
+  max-width: 500px;
   width: 80%;
   height: auto;
 }
 
-/* ========== Smaller Logo (Top Left on Projects Page) ========== */
 .logo-small {
   position: fixed;
   top: 20px;
@@ -53,7 +50,6 @@ body {
   max-width: none;
 }
 
-/* ========== Navbar Styling ========== */
 .navbar {
   position: fixed;
   bottom: 0;
@@ -72,8 +68,9 @@ body {
   font-size: 18px;
   color: white;
 }
-
-/* ========== Page Title & Project Text ========== */
+.nav-link:hover {
+  color: #888;
+}
 .page-title,
 .project-card p {
   color: white;
@@ -86,7 +83,6 @@ body {
   text-align: center;
 }
 
-/* ========== Projects Section ========== */
 .projects-section {
   margin-top: 50px;
   margin-bottom: 100px; /* leaves room for navbar */
@@ -99,13 +95,12 @@ body {
 .project-placeholder {
   width: 100%;
   aspect-ratio: 1 / 1;
-  background-color: rgba(255, 255, 255, 0.9); /* More solid white */
+  background-color: rgba(255, 255, 255, 0.9); /* Will be changed to projects */
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
-/* ========== Responsive Adjustments ========== */
 @media only screen and (max-width: 768px) {
   :root {
     --side-offset: 5%;
@@ -129,7 +124,7 @@ body {
   }
 
   .project-placeholder {
-    height: 200px; /* fallback for browsers that don't support aspect-ratio */
+    height: 200px;
   }
 }
 
@@ -185,4 +180,11 @@ body {
     padding-bottom: 0;
     font-size: 16px;
   }
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover; /* This ensures the image covers the area without distortion */
+  margin-bottom: 10px;
 }
