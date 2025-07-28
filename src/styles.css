@@ -88,7 +88,7 @@ h3 {
 
 .projects-section {
   margin-top: 50px;
-  margin-bottom: 100px; /* leaves room for navbar */
+  margin-bottom: 100px;
 }
 
 .project-card {
@@ -211,4 +211,16 @@ footer {
   left: 0;
   width: 100%;
   z-index: 1000;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  color: white;
+  font-size: 12px;
+  font-weight: 250;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 999;
 }
